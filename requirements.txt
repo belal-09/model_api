@@ -1,4 +1,4 @@
 Flask
-numpy
+numpy<2.0.0,>=1.19.0
 tensorflow==2.10.0
 gunicorn
