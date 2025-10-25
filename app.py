@@ -3,8 +3,7 @@ from flask import Flask, request, jsonify
 from tensorflow.keras.models import load_model
 
 # 1. Flask App Initialization
-app = Flask(_name_)
-
+app = Flask(__name__)
 # Model loading setup
 MODEL_PATH = 'job_posting_model.h5'
 model = None
@@ -60,5 +59,5 @@ def predict():
         return jsonify({'error': f'Prediction or processing failed. Details: {e}'}), 400
 
 # Local test run (Optional)
-if _name_ == '_main_':
+if __name__ == '__main__':
     app.run(debug=True, port=5000)
